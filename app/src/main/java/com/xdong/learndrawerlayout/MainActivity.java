@@ -12,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -41,7 +42,6 @@ public class MainActivity extends AppCompatActivity
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         mTableLayout = (TabLayout) findViewById(R.id.main_tablayout);
-
         mViewPager = (ViewPager) findViewById(R.id.main_viewpager);
         mList = new ArrayList<>();
         mList.add("fouck you 1");
@@ -121,7 +121,12 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("haha");
+            builder.setMessage("fuck you.");
+            builder.setPositiveButton("ok", null);
+            builder.setNegativeButton("cancle", null);
+            builder.create().show();
         } else if (id == R.id.nav_slideshow) {
 
         } else if (id == R.id.nav_manage) {
@@ -129,9 +134,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+            startActivity(new Intent(MainActivity.this,ItemActivity.class));
 
         }
-        startActivity(new Intent(MainActivity.this,ItemActivity.class));
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -158,7 +163,7 @@ public class MainActivity extends AppCompatActivity
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return "fuck you ";
+            return "Fuck you ";
         }
     }
 }
