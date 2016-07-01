@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -54,7 +54,9 @@ public class TestFragment extends Fragment{
         super.onViewCreated(view, savedInstanceState);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.fragment_recyclerview);
         TestRecyclerAdapter adapter = new TestRecyclerAdapter(mList);
-        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),3));
+        //grid 布局，第二个参数是列数。
+        //mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),3));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecyclerView.setAdapter(adapter);
 
         adapter.setOnItemClicker(new TestRecyclerAdapter.OnItemClicker() {

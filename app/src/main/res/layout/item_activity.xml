@@ -7,31 +7,32 @@
     tools:context=".ItemActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/item_barlayout"
         android:layout_width="match_parent"
-        android:layout_height="160dp">
+        android:layout_height="256dp"
+        android:fitsSystemWindows="true"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapse_toorbar"
+            android:id="@+id/collapsing_toolbar_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:contentScrim="?attr/colorPrimary"
-            app:statusBarScrim="?attr/colorPrimary"
+            android:layout_height="match_parent"
+            app:contentScrim="#30469b"
+            app:expandedTitleMarginStart="48dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:src="@mipmap/bg2"
-                app:layout_collapseMode="parallax" />
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/item_toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin" />
-
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
@@ -45,23 +46,20 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:gravity="center"
-                android:text="haha" />
+            <include
+                layout="@layout/adapter_card_item"
+                 />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:gravity="center"
-                android:text="haha" />
+            <include layout="@layout/adapter_card_item" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:gravity="center"
-                android:text="haha" />
+            <include layout="@layout/adapter_card_item" />
+
+            <include layout="@layout/adapter_card_item" />
+
+            <include layout="@layout/adapter_card_item" />
+
+            <include layout="@layout/adapter_card_item" />
+
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
@@ -72,6 +70,6 @@
     <!--android:src="@drawable/ic_menu_share"-->
     <!--app:backgroundTintMode="multiply"-->
     <!--app:borderWidth="0dp"-->
-    <!--app:layout_anchor="@id/appbar"-->
+    <!--app:layout_anchor="@id/item_toolbar"-->
     <!--app:layout_anchorGravity="bottom|end|right" />-->
 </android.support.design.widget.CoordinatorLayout>

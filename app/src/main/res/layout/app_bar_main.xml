@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             app:tabIndicatorColor="@android:color/holo_green_light"
             app:tabMode="scrollable"
+            app:tabTextAppearance="@style/MyCustomTabTextAppearance"
             app:tabSelectedTextColor="@android:color/holo_green_light">
 
         </android.support.design.widget.TabLayout>
