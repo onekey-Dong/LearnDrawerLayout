@@ -19,6 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.xdong.learndrawerlayout.fragment.TestFragment;
+import com.xdong.learndrawerlayout.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -116,6 +117,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        AppUtils.showToast(this, "click is");
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {

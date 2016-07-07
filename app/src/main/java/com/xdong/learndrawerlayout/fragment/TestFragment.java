@@ -1,17 +1,19 @@
 package com.xdong.learndrawerlayout.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.xdong.learndrawerlayout.R;
+import com.xdong.learndrawerlayout.activity.TextActivity;
+import com.xdong.learndrawerlayout.utils.AppUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +64,9 @@ public class TestFragment extends Fragment{
         adapter.setOnItemClicker(new TestRecyclerAdapter.OnItemClicker() {
             @Override
             public void onItemClick(View view, int position) {
-                Log.i(TAG,"View: "+view+" index:"+position);
+               // Log.i(TAG,"View: "+view+" index:"+position);
+                AppUtils.showToast(getContext(), "fuck you.");
+                startActivity(new Intent(getActivity(), TextActivity.class));
             }
         });
     }

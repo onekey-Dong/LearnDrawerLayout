@@ -39,7 +39,7 @@ public class ItemActivity extends AppCompatActivity{
         collapsingTool.setTitle("Item");
         collapsingTool.setCollapsedTitleTextColor(Color.WHITE);
         collapsingTool.setExpandedTitleColor(Color.WHITE);
-        collapsingTool.setExpandedTitleGravity(Gravity.RIGHT|Gravity.BOTTOM);
+        collapsingTool.setExpandedTitleGravity(Gravity.LEFT|Gravity.BOTTOM|Gravity.END);
 
        // mItemRecyclerView = (RecyclerView) findViewById(R.id.item_recyclerview);
 //        mItemRecyclerAdapter = new ItemRecyclerAdapter();
