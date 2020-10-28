@@ -11,3 +11,5 @@ RecyclerView
 DrawerLayout 抽屉布局  
 
 NavigationView 抽屉布局 界面
+
+<img src="https://github.com/onekey-Dong/CirclePointView/blob/master/pic/device-2019-02-25-171144.png" width="960" height="540"/>
